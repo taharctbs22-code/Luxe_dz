@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سماعات الأناقة اللاسلكية - حقيبة الموضة الفاخرة | Luxe DZ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ================= المتغيرات والأساسيات الفاخرة ================= */
+:root {
+    --primary-rose: #ff4e7e;
+    --dark-rose: #ff8dae; /* أفتح ليناسب الخلفية الداكنة */
+    --accent-gold: #e5a93b;
+    --text-main: #ffffff;
+    --text-muted: #d1b9c2;
+    --border-glass: rgba(255, 255, 255, 0.08);
+}
+
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Cairo', sans-serif; 
+    /* خلفية بألوان متداخلة ومضببة (Dark Mesh Gradient) */
+    background: 
+        radial-gradient(circle at 15% 50%, rgba(207, 21, 78, 0.15), transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(229, 169, 59, 0.1), transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(94, 21, 46, 0.25), transparent 50%),
+        linear-gradient(135deg, #13080c 0%, #090305 100%);
+    background-attachment: fixed;
+    color: var(--text-main); 
+    line-height: 1.8; 
+    padding-bottom: 95px; 
+    overflow-x: hidden; 
+}
+
+.container{ width: min(680px, 92%); margin: auto; padding-top: 15px;}
+
+/* ================= شريط الإعلان ================= */
+.top-announcement{
+    background: linear-gradient(90deg, #d62258, #ff4e7e, #e5a93b, #d62258);
+    background-size: 300% auto;
+    animation: gradientMove 5s linear infinite;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(255, 78, 126, 0.2);
+}
+@keyframes gradientMove { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
+
+/* ================= الأقسام الزجاجية الفاخرة (Glassmorphism) ================= */
+.section-wrapper, .comparison-section, .checkout-section { 
+    background: linear-gradient(145deg, rgba(45, 20, 31, 0.6), rgba(20, 8, 13, 0.4));
+    border: 1px solid var(--border-glass);
+    border-radius: 26px;
+    padding: 25px 15px;
+    margin-bottom: 35px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ================= العناوين الذهبية/الوردية ================= */
+.section-title, .checkout-title { 
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: 900; 
+    background: linear-gradient(to right, #ffb6c1, #ff6b95, #e5a93b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px; 
+    line-height: 1.4; 
+}
+.section-subtitle { text-align: center; font-size: 15px; font-weight: 700; color: var(--text-muted); margin-bottom: 20px; }
+.promo-image { width: 100%; border-radius: 18px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); display: block; object-fit: cover; border: 1px solid rgba(255,255,255,0.05); }
+
+/* ================= جدول المقارنة ================= */
+.compare-table{ width: 100%; border-collapse: collapse; font-size: 14px; background: rgba(0,0,0,0.2); border-radius: 16px; overflow: hidden; }
+.compare-table th{ padding: 14px 8px; font-weight: 800; text-align: center; border-bottom: 1px solid var(--border-glass); }
+.compare-table th.our-prod{ background: linear-gradient(135deg, rgba(207, 21, 78, 0.4), rgba(255, 67, 119, 0.2)); color: #ffb6c1; }
+.compare-table td{ padding: 16px 8px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.03); font-weight: 700; }
+.compare-table td.our-cell{ background: rgba(255, 67, 119, 0.05); color: var(--dark-rose); font-weight: 800; }
+.compare-table td.bad-cell{ color: #88747d; }
+
+/* ================= الضمانات ================= */
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 25px 0; }
+.trust-card { 
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2)); 
+    border: 1px solid var(--border-glass); 
+    border-radius: 20px; 
+    padding: 18px 12px; 
+    text-align: center; 
+    transition: 0.3s;
+}
+.trust-icon { font-size: 30px; margin-bottom: 8px; filter: drop-shadow(0 2px 5px rgba(255,78,126,0.3)); }
+.trust-card strong { display: block; font-size: 14px; font-weight: 800; color: #fff; }
+.trust-card span { font-size: 12px; color: var(--text-muted); }
+
+/* ================= استمارة الطلب والمدخلات ================= */
+.checkout-preview { text-align: center; margin-bottom: 25px; }
+.checkout-preview img { width: 150px; height: 150px; border-radius: 20px; border: 2px solid var(--dark-rose); box-shadow: 0 10px 30px rgba(255, 78, 126, 0.3); object-fit: cover; transition: 0.3s; }
+.checkout-preview p { font-size: 13px; font-weight: 800; color: var(--text-muted); margin-top: 10px; }
+
+/* العروض */
+.offer-card { 
+    background: rgba(0,0,0,0.3); 
+    border: 1.5px solid var(--border-glass); 
+    border-radius: 18px; 
+    padding: 16px; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    position: relative; 
+}
+.offer-card.active { 
+    border-color: var(--primary-rose); 
+    background: linear-gradient(145deg, rgba(255, 78, 126, 0.1), rgba(0,0,0,0.5)); 
+    box-shadow: inset 0 0 20px rgba(255,78,126,0.05); 
+}
+.offer-title { font-weight: 800; font-size: 16px; color: #fff; display: block; }
+.offer-price { font-weight: 900; font-size: 18px; color: var(--dark-rose); }
+.offer-badge { position: absolute; top: -12px; left: 15px; background: linear-gradient(90deg, #d62258, #ff4e7e); color: #fff; font-size: 12px; font-weight: 800; padding: 4px 12px; border-radius: 20px; box-shadow: 0 4px 10px rgba(214, 34, 88, 0.4);}
+
+/* الألوان */
+.color-picker-group { margin-top: 15px; display: none; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,0.1);}
+.color-picker-title { font-size: 13px; font-weight: 800; margin-bottom: 12px; color: var(--text-muted); }
+.colors-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.color-btn { width: 42px; height: 42px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; transition: 0.2s; }
+.color-btn.active { transform: scale(1.15); border-color: #fff; box-shadow: 0 0 15px rgba(255,255,255,0.4); }
+.c-orange { background: #d35400; }
+.c-pink { background: #ffb6c1; }
+.c-black { background: #111; }
+.c-white { background: #fdfdfd; }
+
+/* الحقول */
+.form-group { margin-bottom: 18px; }
+label { display: block; font-weight: 800; font-size: 14px; margin-bottom: 8px; color: #e5dce0; }
+input, select { 
+    width: 100%; 
+    padding: 15px; 
+    background: rgba(0,0,0,0.4); 
+    border: 1.5px solid rgba(255,255,255,0.1); 
+    border-radius: 14px; 
+    font-family: 'Cairo', sans-serif; 
+    font-size: 15px; 
+    color: #fff; 
+    transition: 0.3s; 
+    outline: none; 
+}
+input::placeholder { color: rgba(255,255,255,0.3); }
+input:focus, select:focus { border-color: var(--primary-rose); box-shadow: 0 0 0 3px rgba(255, 78, 126, 0.2); background: rgba(0,0,0,0.6); }
+select option { background: #1a0b12; color: #fff; }
+
+/* نوع التوصيل */
+.delivery-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+.del-tab { flex: 1; text-align: center; padding: 14px; background: rgba(0,0,0,0.3); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 14px; font-weight: 800; cursor: pointer; transition: 0.3s; color: var(--text-muted);}
+.del-tab.active { border-color: var(--primary-rose); background: rgba(255, 78, 126, 0.15); color: #fff; }
+
+/* ملخص الطلب */
+.order-summary { background: rgba(0,0,0,0.2); border: 1.5px dashed rgba(255, 78, 126, 0.3); border-radius: 18px; padding: 18px; margin-top: 25px; }
+.sum-line { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; margin-bottom: 10px; color: var(--text-muted); }
+.sum-total { border-top: 1px dashed rgba(255,255,255,0.1); margin-top: 12px; padding-top: 12px; font-size: 22px; font-weight: 900; color: var(--dark-rose); display: flex; justify-content: space-between; }
+
+/* الأزرار */
+.btn-submit { width: 100%; background: linear-gradient(135deg, #ff4e7e, #b81544); color: #fff; border: none; padding: 18px; border-radius: 16px; font-size: 19px; font-weight: 900; font-family: inherit; cursor: pointer; margin-top: 20px; transition: 0.3s; box-shadow: 0 10px 25px rgba(255, 78, 126, 0.4); text-shadow: 0 2px 4px rgba(0,0,0,0.3);}
+.btn-submit:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 78, 126, 0.5); }
+.btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* الشريط السفلي الوامض */
+.sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15, 6, 10, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); padding: 15px 20px; border-top: 1px solid var(--border-glass); z-index: 999; display: flex; justify-content: center; }
+.btn-pulse { background: linear-gradient(135deg, #ff4e7e, #d62258); color: white; border: none; padding: 14px 40px; border-radius: 30px; font-size: 18px; font-weight: 900; font-family: inherit; cursor: pointer; animation: pulse 1.5s infinite; box-shadow: 0 0 0 0 rgba(214, 34, 88, 0.7); width: 100%; max-width: 400px;}
+@keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(214, 34, 88, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(214, 34, 88, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(214, 34, 88, 0); } }
+
+/* نافذة النجاح */
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: 0.4s; padding: 20px; }
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal-box { background: linear-gradient(145deg, #2a121a, #1a0810); border: 1px solid rgba(255,78,126,0.3); padding: 35px 20px; border-radius: 24px; text-align: center; max-width: 400px; width: 100%; transform: scale(0.8); transition: 0.4s; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.modal-overlay.active .modal-box { transform: scale(1); }
+.success-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #10b981, #059669); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 40px; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+.modal-title { font-size: 24px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+.modal-text { font-size: 15px; color: var(--text-muted); font-weight: 600; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<div class="top-announcement">
+    ✨ عرض الأناقة الحصري: توصيل لـ 58 ولاية • افتحي وعايني قبل الدفع ✨
+</div>
+
+<div class="container">
+    
+    <div class="section-wrapper">
+        <h2 class="section-title">أناقة عصرية... لمسة ساحرة لهاتفك</h2>
+        <div class="section-subtitle">اكتشفوا المجموعة الفاخرة المضيئة</div>
+        <img src="1000043646_2.jpg" class="promo-image">
+    </div>
+
+    <div class="section-wrapper">
+        <h2 class="section-title">راحة فائقة طوال اليوم</h2>
+        <div class="section-subtitle">تصميم مبتكر يمنحك ثباتاً مثالياً دون الدخول في قناة الأذن</div>
+        <img src="1000043655.jpg" class="promo-image">
+    </div>
+
+    <div class="comparison-section">
+        <h3 class="section-title" style="font-size: 20px; margin-bottom: 20px;">لماذا تختلف سماعاتنا؟</h3>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>الميزة</th>
+                    <th class="our-prod">سماعاتنا (Luxe)</th>
+                    <th>سماعات عادية</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ألم الأذن</td>
+                    <td class="our-cell">مريحة 100%</td>
+                    <td class="bad-cell">تسبب ضغط وألم</td>
+                </tr>
+                <tr>
+                    <td>الثبات</td>
+                    <td class="our-cell">ثابتة لا تسقط</td>
+                    <td class="bad-cell">تنزلق مع الحركة</td>
+                </tr>
+                <tr>
+                    <td>المظهر</td>
+                    <td class="our-cell">إكسسوار فاخر</td>
+                    <td class="bad-cell">تصميم تقليدي</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section-wrapper">
+        <h2 class="section-title">بأربع ألوان عصرية وجذابة</h2>
+        <div class="section-subtitle">اختاري اللون الذي يعكس شخصيتك ويتناسب مع إطلالتك</div>
+        <img src="1000043656_2.jpg" class="promo-image">
+    </div>
+
+    <div class="section-wrapper">
+        <h2 class="section-title">لماذا تختارين منتجنا؟</h2>
+        <div class="trust-grid">
+            <div class="trust-card">
+                <div class="trust-icon">📦</div>
+                <strong>حق المعاينة</strong>
+                <span>افتحي الطرد وتأكدي قبل الدفع.</span>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">🤝</div>
+                <strong>الدفع عند الاستلام</strong>
+                <span>لا تدفعي شيئاً حتى يصلك المنتج.</span>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">💎</div>
+                <strong>جودة مضمونة</strong>
+                <span>تصميم فاخر مطابق للصور.</span>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">🎧</div>
+                <strong>صوت نقي</strong>
+                <span>تجربة استماع ممتازة وعزل.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-section" id="checkoutForm">
+        <h2 class="checkout-title">أطلبي الآن واستفيدي من العرض</h2>
+
+        <div class="checkout-preview">
+            <img id="mainPreviewImage" src="1000043641.jpg">
+            <p>اللون المختار حالياً</p>
+        </div>
+
+        <label>اختاري العرض المناسب لك:</label>
+        
+        <div class="offer-card active" onclick="selectOffer(1, 2800, false)">
+            <span class="offer-title">قطعة واحدة</span>
+            <span class="offer-price">2800 د.ج</span>
+            <div class="color-picker-group" id="colors-offer-1" style="display: block;">
+                <div class="color-picker-title">اختاري اللون:</div>
+                <div class="colors-row">
+                    <div class="color-btn c-orange active" onclick="selectColor(1, 'برتقالي', '1000043641.jpg', event)"></div>
+                    <div class="color-btn c-pink" onclick="selectColor(1, 'وردي فاتح', '1000043598.jpg', event)"></div>
+                    <div class="color-btn c-black" onclick="selectColor(1, 'أسود', '1000043603.jpg', event)"></div>
+                    <div class="color-btn c-white" onclick="selectColor(1, 'أبيض', '1000043602.jpg', event)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer-card" onclick="selectOffer(2, 5200, false)">
+            <div class="offer-badge">توفير رائع</div>
+            <span class="offer-title">قطعتين (نفس اللون أو مختلفين)</span>
+            <span class="offer-price">5200 د.ج</span>
+            <div class="color-picker-group" id="colors-offer-2">
+                <select id="offer2-type" style="margin-bottom: 10px;" onchange="toggleOffer2Colors(this.value)">
+                    <option value="same">نفس اللون للقطعتين</option>
+                    <option value="diff">لونين مختلفين</option>
+                </select>
+                <div id="offer2-color-1">
+                    <div class="color-picker-title">لون القطعة الأولى:</div>
+                    <div class="colors-row">
+                        <div class="color-btn c-orange active" onclick="selectColor(2, 'برتقالي', '1000043641.jpg', event)"></div>
+                        <div class="color-btn c-pink" onclick="selectColor(2, 'وردي فاتح', '1000043598.jpg', event)"></div>
+                        <div class="color-btn c-black" onclick="selectColor(2, 'أسود', '1000043603.jpg', event)"></div>
+                        <div class="color-btn c-white" onclick="selectColor(2, 'أبيض', '1000043602.jpg', event)"></div>
+                    </div>
+                </div>
+                <div id="offer2-color-2" style="display:none; margin-top:10px;">
+                    <div class="color-picker-title">لون القطعة الثانية:</div>
+                    <div class="colors-row">
+                        <div class="color-btn c-orange active" onclick="selectColor(22, 'برتقالي', '1000043641.jpg', event)"></div>
+                        <div class="color-btn c-pink" onclick="selectColor(22, 'وردي فاتح', '1000043598.jpg', event)"></div>
+                        <div class="color-btn c-black" onclick="selectColor(22, 'أسود', '1000043603.jpg', event)"></div>
+                        <div class="color-btn c-white" onclick="selectColor(22, 'أبيض', '1000043602.jpg', event)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer-card" onclick="selectOffer(3, 7800, true)">
+            <div class="offer-badge" style="background: linear-gradient(90deg, #d4af37, #f3e5ab);">العرض الذهبي 🔥</div>
+            <span class="offer-title">3 قطع + توصيل مجاني للمكتب</span>
+            <span class="offer-price">7800 د.ج</span>
+            <div class="color-picker-group" id="colors-offer-3">
+                <div class="color-picker-title">سيتم التواصل معك هاتفياً لتحديد ألوان القطع الثلاثة لضمان خدمتك بأفضل شكل.</div>
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 25px;">
+            <label>الاسم واللقب:</label>
+            <input type="text" id="fullName" placeholder="اكتبي اسمك الكامل هنا..." required>
+        </div>
+        <div class="form-group">
+            <label>رقم الهاتف:</label>
+            <input type="tel" id="phone" placeholder="05xx xx xx xx" required dir="ltr" style="text-align: right;">
+        </div>
+
+        <label>نوع التوصيل:</label>
+        <div class="delivery-tabs">
+            <div class="del-tab active" onclick="setDelivery('desk', this)">للمكتب (Stop Desk)</div>
+            <div class="del-tab" onclick="setDelivery('home', this)">للمنزل</div>
+        </div>
+
+        <div class="form-group">
+            <label>الولاية:</label>
+            <select id="wilaya" onchange="updateCommunes()">
+                <option value="" disabled selected>اختاري ولايتك...</option>
+            </select>
+        </div>
+        
+        <div class="form-group" id="communeGroup" style="display: none;">
+            <label>البلدية:</label>
+            <select id="commune">
+                <option value="" disabled selected>اختاري البلدية...</option>
+            </select>
+        </div>
+
+        <div class="order-summary">
+            <div class="sum-line">
+                <span>سعر العرض:</span>
+                <span id="sumPrice">2800 د.ج</span>
+            </div>
+            <div class="sum-line">
+                <span>تكلفة التوصيل:</span>
+                <span id="sumShipping">0 د.ج</span>
+            </div>
+            <div class="sum-total">
+                <span>المجموع النهائي:</span>
+                <span id="sumTotal">2800 د.ج</span>
+            </div>
+        </div>
+
+        <button class="btn-submit" onclick="submitOrder()">تأكيد الطلب الآن</button>
+    </div>
+</div>
+
+<div class="sticky-bar">
+    <button class="btn-pulse" onclick="scrollToCheckout()">أطلبي الآن 🛒</button>
+</div>
+
+<div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+        <div class="success-icon">✓</div>
+        <div class="modal-title">شكراً لكِ! تم تسجيل طلبك</div>
+        <div class="modal-text">
+            سنتصل بك في أقرب وقت لتأكيد الطلبية.<br>
+            يرجى إبقاء هاتفك متاحاً والرد على مكالمتنا.<br>
+            <br><strong style="color: var(--dark-rose);">نشكرك على ثقتك بمنتجنا - فريق Luxe DZ</strong>
+        </div>
+        <button class="btn-submit" style="margin-top:25px; padding: 14px;" onclick="closeModal()">إغلاق</button>
+    </div>
+</div>
+
+<script>
+    const botToken = "8655528892:AAGhS2Pmix_YDnpCJ9ahAzVKGodewm2vNx0";
+    const chatId = "5975408894";
+    
+    // القائمة الكاملة والمرتبة للولايات والبلديات
+    const algeriaData = {
+        "01": { name: "01 - أدرار", home: 800, desk: 500, communes: ["أدرار","تمنطيط","بوادي","شروين","طمين","بودة","أولاد أحمد تيمي","تسابيت","زاوية كنتة","رقان","سالي","تيميمون","أولاد عيسى","قصر قدور","المطارفة","تيط","دلدول","السبع","أنزجمير","فنوغيل","أوقروت"] },
+        "02": { name: "02 - الشلف", home: 600, desk: 400, communes: ["الشلف","تنس","أبو الحسن","الكريمية","المرسى","أم الذروع","البيض","بوقادير","بني راشد","بنايرية","بوزغاية","تاوقريت","تصدان حدادة","تلعصة","حجاج","حرشون","حسيني","الزبابجة","سنجاس","سيدي عبد الرحمن","سيدي عكاشة","شطية","الظهرة","عين مران","مصدق","مجاجة","وادي الفضة","وادي قوسين","ولاد بن عبد القادر","ولاد عباس","ولاد فارس"] },
+        "03": { name: "03 - الأغواط", home: 700, desk: 400, communes: ["الأغواط","آفلو","بريدة","بن ناصر بن شهرة","بيضاء","تاجموت","تاجرونة","حاسي الدلاعة","حاسي الرمل","الخنق","سبقاق","سيدي بوزيد","سيدي مخلوف","الغيشة","قصر الحيران","عين ماضي","عين سيدي علي","قلتة سيدي سعد","وادي مرة","وادي مزي","الحاج مشري","الحويطة","العسافية","البيضاء"] },
+        "04": { name: "04 - أم البواقي", home: 600, desk: 400, communes: ["أم البواقي","عين البيضاء","عين مليلة","سيقوس","هنشير تومغني","عين فكرون","عين كرشة","سوق نعمان","أولاد حملة","بوغرارة السعودي","البلالة","الزرق","بريش","الجازية","بحير الشرقي","الضلعة","الرحية","مسكيانة","عين الزيتون","قصر الصبيحي","وادي نيني","فكرينة","أولاد زواي","العامرية","بئر الشهداء","الظلع","فكيرينة"] },
+        "05": { name: "05 - باتنة", home: 600, desk: 400, communes: ["باتنة","عين التوتة","بريكة","مروانة","المعذر","أريس","نقاوس","الجزار","تيمقاد","الشمرة","بيطام","سقانة","عزيل عبد القادر","الرحبات","تكوت","بومية","بوزينة","كيميل","وادي الماء","بني فضالة","تالخمت","أولاد عمار","فسديس","لمسان","القيقبة","زانة البيضاء","سفيان","سريانة","أولاد سلام","ثنية العابد","أولاد سي سليمان","وادي الشعبة","شير","إشمول"] },
+        "06": { name: "06 - بجاية", home: 600, desk: 400, communes: ["بجاية","أقبو","أميزور","تيمزريت","أوقاس","سوق الإثنين","تاسكريوت","درقينة","صدوق","أمالو","بوزقن","شميني","سيدي عيش","لفلاي","تيفرة","أقبو","ايغيل علي","شلاطة","وزلاقن","أكفادو","القصر","توجة","بني كسيلة","آيت رزين","آيت معوش","تالة حمزة","كنديرة","برباشة","أدكار"] },
+        "07": { name: "07 - بسكرة", home: 700, desk: 400, communes: ["بسكرة","سيدي عقبة","طولقة","الكانطرة","زريبة الوادي","ليوة","أورلال","مشونش","بوشقرون","البرانيس","الحاجب","الوطاية","جمورة","عين زعطوط","مخادمة","الحوش","القنطرة","عين الناقة","سيدي خليل","مليلي","فوغالة","الغروس","المزيرعة","خنيق","شتمة"] },
+        "08": { name: "08 - بشار", home: 800, desk: 500, communes: ["بشار","العبادلة","تاغيت","بوكايس","مريجة","القنادسة","عرق فراج","مشرع هواري بومدين","بني ونيف","موغل","تبلبالة","القصابي","أولاد خضير","تيمودي","بني يخلف","كرزاز","تيميمون","الواتة"] },
+        "09": { name: "09 - البليدة", home: 500, desk: 300, communes: ["البليدة","بوعرفة","الشبلي","بوفاريك","صومعة","الشفة","موزاية","عين الرمانة","العفرون","وادي العلايق","أولاد يعيش","قرواو","الجبابرة","مفتاح","الأربعاء","بوقرة","أولاد سلامة","حمام ملوان","بوعينان","الصومعة","بني مراد","وادي الجر","بني تامو","بن خليل"] },
+        "10": { name: "10 - البويرة", home: 500, desk: 300, communes: ["البويرة","الأخضرية","سور الغزلان","عين بسام","القادرية","أمالو","مشدالله","العجيبة","الأصنام","بشلول","حيزر","ديرة","عمر","المقراني","قرومة","سوق الخميس","الحاكمية","المعمورة","روراوة","دشمية","ريدان","عين الحجر","الهاشمية","وادي البردي"] },
+        "11": { name: "11 - تمنراست", home: 1000, desk: 600, communes: ["تمنراست","عين أمقل","ادلس","تاظروك","أبلسة","تيت","عين قزام","تين زاوتين","عين صالح","فقارة الزوى"] },
+        "12": { name: "12 - تبسة", home: 600, desk: 400, communes: ["تبسة","الشريعة","بئر العاتر","بوخضرة","العوينات","الماء الأبيض","أم علي","صفصاف الوسرة","ثليجان","المزرعة","سطح قنطيس","الونزة","مرسط","القلعة","بئر الذهب","الكويف","عين الزرقاء","الحويجبات","العقلة","عقلة قساس","فركان","المريج"] },
+        "13": { name: "13 - تلمسان", home: 600, desk: 400, communes: ["تلمسان","مغنية","الرمشي","سبدو","ندرومة","منصورة","هنين","حمام بوغرارة","شتوان","الزوية","السهلية","الغزوات","سوق الثلاثاء","باب العسة","مرسى بن مهيدي","بني سنوس","عين تالوت","أولاد ميمون","سيدي مجاهد","بني بوسعيد","عين النحالة","دار يغمراسن","السواني"] },
+        "14": { name: "14 - تيارت", home: 600, desk: 400, communes: ["تيارت","السوقر","فرندة","قصر الشلالة","مهدية","الرحوية","مشرع الصفا","الدحموني","عين بوشقيف","تاخمارت","عين الحديد","ملاكو","مدريسة","توسنينة","النعيمة","سيدي الحسني","وادي ليلي","زمالة الأمير عبد القادر","تيدة","سبعين","قرطوفة","الناظورة"] },
+        "15": { name: "15 - تيزي وزو", home: 500, desk: 300, communes: ["تيزي وزو","عزازقة","ذراع الميزان","بوجيمة","بوغني","واضية","مقلع","تيقزيرت","تادمايت","أزفون","ياكوران","الأربعاء نايث إيراثن","عين الحمام","إفرحونن","آيت يحيى","مشطراس","ماكودة","أقرو","فريحة","زكري","بوزغن"] },
+        "16": { name: "16 - الجزائر", home: 400, desk: 200, communes: ["الجزائر الوسطى","سيدي امحمد","المدنية","بلوزداد","باب الوادي","بولوغين","القصبة","وادي قريش","بئر مراد رايس","الأبيار","بن عكنون","حيدرة","بئر خادم","الجسار","القبة","الجزائر","حسين داي","المقارية","الحراش","بوروبة","وادي السمار","باش جراح","الدرارية","العاشور","خرايسية","الدويرة","باب الزوار","برج الكيفان","المحمدية","برج البحري","زرالدة","المعالمة","الشراقة","الرويبة","الرغاية","هراوة","السمار","سطاوالي","عين البنيان","الحمامات","السحاولة","براقي","الكاليتوس","بني مسوس","دالي إبراهيم"] },
+        "17": { name: "17 - الجلفة", home: 600, desk: 400, communes: ["الجلفة","عين وسارة","مسعد","حاسي بحبح","الشارف","حد الصحاري","البيرين","القديد","سيدي بايزيد","الزعفران","بويرة الأحداب","قطارة","دلدول","أم العظام","سلمانة","عين الإبل","المجبارة","القرنيني","دار الشيوخ","مليليحة","حاسي العش"] },
+        "18": { name: "18 - جيجل", home: 600, desk: 400, communes: ["جيجل","الطاهير","الميلية","قاوس","الأمير عبد القادر","الشقفة","زيامة منصورية","العوانة","السطارة","غبالة","بوسيف أولاد عسكر","برج الطهر","الجمعة بني حبيبي","سيدي معروف","وجانة","بوراوي بلهادف","أولاد رابح","أولاد يحيى خدروش","إيراقن"] },
+        "19": { name: "19 - سطيف", home: 500, desk: 300, communes: ["سطيف","العلمة","عين ولمان","عين أزال","صالح باي","القلتة الزرقاء","حمام السخنة","بني فودة","جميلة","قجال","الرصفة","عين لحجر","عموشة","عين الكبيرة","بابور","تيزي نبشار","بني عزيز","معاوية","الدهامشة","عين الروى","بني أوسين","قصر الأبطال","أولاد صابر","بئر العرش","التلة","الولجة"] },
+        "20": { name: "20 - سعيدة", home: 600, desk: 400, communes: ["سعيدة","الحساسنة","سيدي بوبكر","أولاد إبراهيم","سيدي أحمد","عين الحجر","يوب","ذوي ثابت","الرباحية","مولاي العربي","عين السخونة","دوي ثابت","الحناتة","تيرسين","أولاد خالد"] },
+        "21": { name: "21 - سكيكدة", home: 600, desk: 400, communes: ["سكيكدة","القل","عزابة","الحروش","تمالوس","رمضان جمال","أم الطوب","الكركرة","بني زيد","أولاد عطية","وادي الزهور","الزيتونة","عين قشرة","الحدائق","بوشطاطة","فلفلة","بكوش نداح","بن عزوز","المرسى","جندل سعدي محمد","زردازة","السبت","صالح بوالشعور","أولاد حبابة"] },
+        "22": { name: "22 - سيدي بلعباس", home: 600, desk: 400, communes: ["سيدي بلعباس","سفيزف","تلاغ","بن باديس","رأس الماء","ابن باديس","تسالة","عين الثريد","مرحوم","سيدي علي بن يوب","مولاي سليسن","سيدي خالد","تنيرة","بوخنيفيس","حاسي زهانة","سيدي يعقوب","عين البرد","مقدورة","بلعربي","مزرير","مصطفى بن إبراهيم","سيدي علي بوسيدي","عين قادة","لمطار"] },
+        "23": { name: "23 - عنابة", home: 500, desk: 300, communes: ["عنابة","البوني","برحال","الحجار","سيدي عمار","وادي العنب","الشرفة","العلمة","تريعات","شطايبي","سرايدي","عين الباردة"] },
+        "24": { name: "24 - قالمة", home: 600, desk: 400, communes: ["قالمة","بوشقوف","وادي الزناتي","عين مخلوف","هيليوبوليس","الفجوج","بلخير","بوعاتي محمود","بوهمدان","برج صباط","عين رقادة","سلاوة عنونة","رأس العقبة","مجاز عمار","بن جراح","الركنية","مجاز الصفاء","حمام الدباغ","حمام النبائل","الدهوارة","وادي الشحم","عين بن بيضاء"] },
+        "25": { name: "25 - قسنطينة", home: 500, desk: 300, communes: ["قسنطينة","الخروب","عين سمارة","حامة بوزيان","ديدوش مراد","زيغود يوسف","بني حميدان","ابن زياد","عين عبيد","أولاد رحمون","مسعود بوجريو"] },
+        "26": { name: "26 - المدية", home: 600, desk: 400, communes: ["المدية","البرواقية","قصر البخاري","بني سليمان","تابلاط","العمارية","شلالة العذاورة","السواقي","وزرة","عين بوسيف","الشهبونية","بوغزول","الزبيرية","سيدي نعمان","عزيز","درع السماري","الحمدانية","بوزغاوة","الميهوب","بوسكن","القلب الكبير","سدراية","مغراوة","الربعية"] },
+        "27": { name: "27 - مستغانم", home: 600, desk: 400, communes: ["مستغانم","عين تادلس","عشعاشة","سيدي علي","حاسي مماش","عين النويصي","مازغران","ستيديا","فرناكة","بوقيراط","السوافلية","الصفصاف","صيادة","خير الدين","بن عبد المالك رمضان","خضرة","نقمارية","سيدي لخضر","حجاج","الصور","بوقيرات"] },
+        "28": { name: "28 - المسيلة", home: 600, desk: 400, communes: ["المسيلة","بوسعادة","مڨرة","سيدي عيسى","عين الملح","بن سرور","أولاد دراج","تارمونت","خوبانة","المطارفة","المعاضيد","برهوم","عين الخضراء","بلعائبة","أولاد عدي القبالة","الشلال","أولاد ماضي","خطوطي سد الجير","شلالة العذاورة","سيدي عامر","ولتام","توسمولين","الهامل"] },
+        "29": { name: "29 - معسكر", home: 600, desk: 400, communes: ["معسكر","تيغنيف","سيق","المحمدية","بوحنيفية","وادي الأبطال","حسين","غريس","ماتمور","القرط","الهاشم","زاغية","الزهانة","عين فكان","وادي التاغية","عقاز","العلايمية","المامونية","فروحة","تيزي","ماقضة","السهايلية","البنيان","المناور"] },
+        "30": { name: "30 - ورقلة", home: 800, desk: 500, communes: ["ورقلة","حاسي مسعود","الرويسات","تقرت","المقارين","تماسين","الزاوية العابدية","الطيبات","المنقر","بن ناصر","سيدي خويلد","حاسي بن عبد الله","عين البيضاء","البرمة","النقوسة","الحجيرة","بلدة عمر"] },
+        "31": { name: "31 - وهران", home: 500, desk: 300, communes: ["وهران","بئر الجير","السانيا","أرزيو","بطيوة","وادي تليلات","قديل","الكرمة","مسرغين","بوسفر","عين الترك","العنصر","المرسى الكبير","بن فريحة","سيدي بن يبقى","حاسي بونيف","بوفاطيس","حاسي مفسوخ","طافراوي","البرية","سيدي الشحمي","عين الكرمة","بوعتليلة","مقطع دوز","حاسي عامر","بوصفر"] },
+        "32": { name: "32 - البيض", home: 700, desk: 400, communes: ["البيض","بوقطب","الأبيض سيدي الشيخ","بريزينة","رقاصة","توسمولين","الكراكدة","عين العراك","عين المراكب","الغاسول","بوسمغون","الخيثر","المحرة","اربوات","شقيق"] },
+        "33": { name: "33 - إليزي", home: 1000, desk: 600, communes: ["إليزي","جانت","برج عمر إدريس","إن أميناس","برج الحواس","دبداب"] },
+        "34": { name: "34 - برج بوعريريج", home: 600, desk: 400, communes: ["برج بوعريريج","رأس الوادي","برج الغدير","بئر قاصد علي","مجانة","المنصورة","المهير","عين تاغروت","الرابطة","القلة","تسيرة","القصور","الحمادية","تكستر","خليل","سيدي امبارك","العش","بليمور","اليزير","عين تسرة"] },
+        "35": { name: "35 - بومرداس", home: 500, desk: 300, communes: ["بومرداس","الثنية","دلس","برج منايل","بودواو","الخروبة","قورصو","تيجلابين","بومرداس","لقاطة","يسر","الناصرية","شعبة العامر","بني عمران","سوق الحد","خميس الخشنة","حمادي","أولاد موسى","بوزقزة قدارة","تاورقة","أعفير","بن شود"] },
+        "36": { name: "36 - الطارف", home: 600, desk: 400, communes: ["الطارف","القالة","الذرعان","بوحجار","البسباس","بن مهيدي","بوثلجة","بحيرة الطيور","شبيطة مختار","الشط","ابن مهيدي","عين العسل","السوارخ","أم الطبول","الزيتونة","عصفور","حمام بني صالح","وادي الزيتون","رمل السوق","شيفية"] },
+        "37": { name: "37 - تندوف", home: 900, desk: 500, communes: ["تندوف","أم العسل"] },
+        "38": { name: "38 - تيسمسيلت", home: 600, desk: 400, communes: ["تيسمسيلت","ثنية الحد","برج بونعامة","العيون","خميستي","عماري","بوقايد","سيدي سليمان","لرجام","المعاصم","سيدي عابد","بني شعيب","بني لحسن","سيدي لعروسي"] },
+        "39": { name: "39 - الوادي", home: 700, desk: 400, communes: ["الوادي","الدبيلة","جامعة","المغير","الرقيبة","البياضة","قمار","حاسي خليفة","الرباح","الطريفاوي","الزقم","النخلة","ورماس","تغزوت","ميهوب","العقيلة","كويف","سطيل","أم الطيور"] },
+        "40": { name: "40 - خنشلة", home: 600, desk: 400, communes: ["خنشلة","قايس","بوحمامة","ششار","عين الطويلة","أولاد رشاش","المحمل","بابار","تاوزيانت","يابوس","لمصارة","بغاي","الحامة","انسيغة","متوسة","الولجة","جلال","خيران"] },
+        "41": { name: "41 - سوق أهراس", home: 600, desk: 400, communes: ["سوق أهراس","سدراتة","مداوروش","المشروحة","تاورة","الحدادة","لخضارة","ويلان","المرحوم","ترقالت","سافل الويدان","بئر بوحوش","تيفاش","الزوابي","عين الزانة","الدريعة","الراقوبة"] },
+        "42": { name: "42 - تيبازة", home: 500, desk: 300, communes: ["تيبازة","القوليعة","شرشال","بواسماعيل","فوكة","الدواودة","حجوط","مراد","الناظور","سيدي عمار","قوراية","الداموس","أغبال","لارهاط","سيدي غيلاس","حجرة النص","شنوة","عين تقورايت","خميستي","بوهارون","سيدي راشد"] },
+        "43": { name: "43 - ميلة", home: 600, desk: 400, communes: ["ميلة","شلغوم العيد","تاجنانت","التلاغمة","القرارم قوقة","فرجيوة","زغاية","الرواشد","وادي النجاء","احمد راشدي","سيدي مروان","تاسدان حدادة","الشيغارة","بني قشة","بوالدحم","بوحاتم","عين الملوك","تيبرقنت"] },
+        "44": { name: "44 - عين الدفلى", home: 500, desk: 300, communes: ["عين الدفلى","الخميس","العطاف","جليدة","بوراشد","روينة","الحسينية","العامرة","المخاطرية","وادي الشرفاء","بومدفع","تاريك","الحسنية","عين البنيان","بئر ولد خليفة","عريب","سيدي لخضر","الروينة","زدين","الميلية"] },
+        "45": { name: "45 - النعامة", home: 700, desk: 400, communes: ["النعامة","المشرية","العين الصفراء","مكمن بن عمار","عين بن خليل","تيوت","صفيصيفة","عسلة","مغار","قصدير"] },
+        "46": { name: "46 - عين تموشنت", home: 600, desk: 400, communes: ["عين تموشنت","بني صاف","ولهاصة","حمام بوحجر","العامرية","عين الكيحل","عين الطلبة","عين الأربعاء","سيدي بن عدة","سيدي بومدين","عقب الليل","المالح","شعبة اللحم","الامير عبد القادر","تارقة","بوزجار"] },
+        "47": { name: "47 - غرداية", home: 700, desk: 400, communes: ["غرداية","القرارة","متليلي","بريان","زلفانة","بونورة","ضاية بن ضحوة","العطف","سبسب","المنصورة","المنيعة","حاسي القارة","حاسي لفحل"] },
+        "48": { name: "48 - غليزان", home: 600, desk: 400, communes: ["غليزان","وادي ارهيو","مازونة","عمي موسى","جديوية","المطمر","زمورة","يلل","الرمكة","الحمادنة","بني درقن","وادي الجمعة","الولجة","القطار","سيدي امحمد بن علي","مديونة","بني زينت","عين طارق","سوق الحد"] },
+        "49": { name: "49 - تيميمون", home: 900, desk: 500, communes: ["تيميمون","أوقروت","شروين","المطارفة","دلدول","طمين","تينركوك","قصر قدور","أولاد عيسى","طالمنكات"] },
+        "50": { name: "50 - برج باجي مختار", home: 1000, desk: 600, communes: ["برج باجي مختار","تيمياوين"] },
+        "51": { name: "51 - أولاد جلال", home: 700, desk: 400, communes: ["أولاد جلال","الدوسن","سيدي خالد","البسباس","رأس الميعاد","الشعيبة"] },
+        "52": { name: "52 - بني عباس", home: 800, desk: 500, communes: ["بني عباس","الواتة","إقلي","بني يخلف","القصابي","أولاد خضير","تيمودي","كرزاز","تامترت"] },
+        "53": { name: "53 - عين صالح", home: 900, desk: 500, communes: ["عين صالح","إن غار","فقارة الزوى"] },
+        "54": { name: "54 - عين قزام", home: 1000, desk: 600, communes: ["عين قزام","تين زاوتين"] },
+        "55": { name: "55 - تقرت", home: 700, desk: 400, communes: ["تقرت","النزلة","تبسبست","الزاوية العابدية","المقارين","بلدة عمر","تماسين","المنقر","الطيبات","الحجيرة","بن ناصر"] },
+        "56": { name: "56 - جانت", home: 1000, desk: 600, communes: ["جانت","برج الحواس"] },
+        "57": { name: "57 - المغير", home: 700, desk: 400, communes: ["المغير","جامعة","أم الطيور","سيدي عمران","سطيل","تندلة","سيدي خليل","المرارة"] },
+        "58": { name: "58 - المنيعة", home: 800, desk: 500, communes: ["المنيعة","حاسي القارة","حاسي لفحل"] },
+        "other": { name: "ولايات أخرى", home: 800, desk: 500, communes: ["بلدية أخرى"] }
+    };
+
+    let currentOffer = 1, productPrice = 2800, isOffer3 = false, deliveryType = 'desk';
+    let selectedColors = { offer1: 'برتقالي', offer2_1: 'برتقالي', offer2_2: 'برتقالي' };
+    let shippingCost = 0, finalTotal = 2800;
+
+    window.onload = function() {
+        let wilayaSelect = document.getElementById('wilaya');
+        let keys = Object.keys(algeriaData).sort((a, b) => {
+            if(a === 'other') return 1;
+            if(b === 'other') return -1;
+            return parseInt(a) - parseInt(b);
+        });
+
+        keys.forEach(key => {
+            let option = document.createElement('option');
+            option.value = key;
+            option.text = algeriaData[key].name;
+            wilayaSelect.add(option);
+        });
+    };
+
+    function scrollToCheckout() { document.getElementById('checkoutForm').scrollIntoView({ behavior: 'smooth' }); }
+
+    function selectOffer(offerNum, price, isGold) {
+        currentOffer = offerNum; productPrice = price; isOffer3 = isGold;
+        document.querySelectorAll('.offer-card').forEach(card => card.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        document.getElementById('colors-offer-1').style.display = (offerNum === 1) ? 'block' : 'none';
+        document.getElementById('colors-offer-2').style.display = (offerNum === 2) ? 'block' : 'none';
+        document.getElementById('colors-offer-3').style.display = (offerNum === 3) ? 'block' : 'none';
+        calculateTotal();
+    }
+
+    function toggleOffer2Colors(type) { document.getElementById('offer2-color-2').style.display = (type === 'diff') ? 'block' : 'none'; }
+
+    function selectColor(group, colorName, imageSrc, event) {
+        event.stopPropagation();
+        let parentRow = event.currentTarget.parentElement;
+        parentRow.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        
+        if (group === 1) selectedColors.offer1 = colorName;
+        if (group === 2) selectedColors.offer2_1 = colorName;
+        if (group === 22) selectedColors.offer2_2 = colorName;
+        
+        if (imageSrc !== '') document.getElementById('mainPreviewImage').src = imageSrc;
+    }
+
+    function setDelivery(type, element) {
+        deliveryType = type;
+        document.querySelectorAll('.del-tab').forEach(tab => tab.classList.remove('active'));
+        element.classList.add('active');
+        document.getElementById('communeGroup').style.display = (type === 'home') ? 'block' : 'none';
+        calculateTotal();
+    }
+
+    function updateCommunes() {
+        let wilayaKey = document.getElementById('wilaya').value;
+        let communeSelect = document.getElementById('commune');
+        communeSelect.innerHTML = '<option value="" disabled selected>اختاري البلدية...</option>';
+        
+        if (wilayaKey && algeriaData[wilayaKey]) {
+            let communesList = algeriaData[wilayaKey].communes;
+            communesList.sort();
+            communesList.forEach(function(communeName) {
+                let option = document.createElement('option');
+                option.value = communeName;
+                option.text = communeName;
+                communeSelect.add(option);
+            });
+        }
+        calculateTotal();
+    }
+
+    function calculateTotal() {
+        let wilaya = document.getElementById('wilaya').value;
+        if (!wilaya) {
+            shippingCost = 0;
+        } else {
+            let costs = algeriaData[wilaya] || algeriaData["other"];
+            if (isOffer3) {
+                shippingCost = (deliveryType === 'desk') ? 0 : (costs.home - costs.desk);
+            } else {
+                shippingCost = (deliveryType === 'desk') ? costs.desk : costs.home;
+            }
+        }
+        finalTotal = productPrice + shippingCost;
+        document.getElementById('sumPrice').innerText = productPrice + " د.ج";
+        document.getElementById('sumShipping').innerText = shippingCost + " د.ج";
+        document.getElementById('sumTotal').innerText = finalTotal + " د.ج";
+    }
+
+    function submitOrder() {
+        let name = document.getElementById('fullName').value.trim();
+        let phone = document.getElementById('phone').value.trim();
+        let wilayaElement = document.getElementById('wilaya');
+        let wilayaText = wilayaElement.options[wilayaElement.selectedIndex]?.text || "";
+        let commune = document.getElementById('commune').value;
+
+        if (name === "" || phone === "" || wilayaElement.value === "") {
+            alert("يرجى إدخال الاسم، رقم الهاتف، واختيار الولاية.");
+            return;
+        }
+        if (deliveryType === 'home' && (!commune || commune === "")) {
+            alert("يرجى اختيار البلدية الخاصة بك لتوصيل المنزل.");
+            return;
+        }
+
+        let colorDetails = "";
+        if (currentOffer === 1) { colorDetails = `اللون: ${selectedColors.offer1}`; } 
+        else if (currentOffer === 2) {
+            let type = document.getElementById('offer2-type').value;
+            colorDetails = (type === 'same') ? `قطعتين نفس اللون: ${selectedColors.offer2_1}` : `القطعة الأولى: ${selectedColors.offer2_1} | الثانية: ${selectedColors.offer2_2}`;
+        } else { colorDetails = "3 قطع (سيتم تحديد الألوان هاتفياً)"; }
+
+        let message = `🛒 *طلبية جديدة (Luxe DZ)*\n\n👤 *الاسم:* ${name}\n📞 *الهاتف:* ${phone}\n📍 *الولاية:* ${wilayaText}\n🚚 *التوصيل:* ${deliveryType === 'home' ? 'للمنزل' : 'للمكتب'}\n`;
+        if (deliveryType === 'home') message += `🏠 *البلدية:* ${commune}\n`;
+        message += `\n📦 *العرض:* عرض ${currentOffer} (${productPrice} دج)\n🎨 *الألوان:* ${colorDetails}\n\n💰 *الإجمالي النهائي:* ${finalTotal} د.ج`;
+
+        let url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+        
+        let btn = document.querySelector('.btn-submit');
+        btn.innerText = "جاري الإرسال..."; btn.disabled = true;
+
+        fetch(url).then(response => {
+            if (response.ok) document.getElementById('successModal').classList.add('active');
+            else alert("حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.");
+        }).catch(error => { alert("يرجى التحقق من اتصالك بالإنترنت."); })
+          .finally(() => { btn.innerText = "تأكيد الطلب الآن"; btn.disabled = false; });
+    }
+
+    function closeModal() { document.getElementById('successModal').classList.remove('active'); }
+</script>
+
+</body>
+</html>
